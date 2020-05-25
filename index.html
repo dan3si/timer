@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="main-container">
+		<div class="timer-container">
+			<div class="timer">
+				<div class="timer-counts">1</div>
+				<div class="timer-counts">2</div>
+				<div class="timer-counts">3</div>
+				<div class="timer-counts">4</div>
+				<div class="timer-counts">5</div>
+				<div class="timer-counts">6</div>
+				<div class="timer-counts">7</div>
+				<div class="timer-counts">8</div>
+				<div class="timer-counts">9</div>
+				<div class="timer-counts">10</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+
+
+
+
+<style>
+body{
+	background: #333333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.main-container{
+	height: 70vmin;
+	width: 70vmin;
+	border-radius: 100%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+.timer-container{
+	height: 50%;
+	width: 50%;
+	border-radius: 100%;
+	overflow: hidden;
+	z-index: 3;
+	position: absolute;
+}
+.timer{
+	height: 1000%;
+	background: #333333;
+	margin-top: -900%;
+	animation: counter 10s infinite;
+}
+.timer-counts{
+	height: 10%;
+	width: 100%;
+	font-size: 4em;
+	font-family: arial;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+@keyframes counter {
+	0%{
+		margin-top: -900%;
+	}
+	9.99%{
+		margin-top: -900%;
+	}
+	10%{
+		margin-top: -800%;
+	}
+	19.99%{
+		margin-top: -800%;
+	}
+	20%{
+		margin-top: -700%;
+	}
+	29.99%{
+		margin-top: -700%;
+	}
+	30%{
+		margin-top: -600%;
+	}
+	39.99%{
+		margin-top: -600%;
+	}
+	40%{
+		margin-top: -500%;
+	}
+	49.99%{
+		margin-top: -500%;
+	}
+	50%{
+		margin-top: -400%;
+	}
+	59.99%{
+		margin-top: -400%;
+	}
+	60%{
+		margin-top: -300%;
+	}
+	69.99%{
+		margin-top: -300%;
+	}
+	70%{
+		margin-top: -200%;
+	}
+	79.99%{
+		margin-top: -200%;
+	}
+	80%{
+		margin-top: -100%;
+	}
+	89.99%{
+		margin-top: -100%;
+	}
+	90%{
+		margin-top: 0%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+.main-container:before{
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: #7a9068;
+	position: absolute;
+	top: 0;
+	left: -50%;
+	transform-origin: right;
+	animation: field 10s infinite linear;
+}
+@keyframes field {
+	0%{
+
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.main-container:after{
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	left: -50%;
+	z-index: 2;
+	animation: mask 10s infinite;
+}
+@keyframes mask {
+	49.99%{
+		left: -50%;
+		background: white;
+	}
+	50%{
+		left: 50%;
+		background: #7a9068;
+	}
+	100%{
+		left: 50%;
+		background: #7a9068;
+	}
+
+}
+</style>
+</html>
